@@ -1,20 +1,68 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="root">
+  <div class="bar">
+    <div class="left">
+      <img class="icon" src="assets/icon/wifi.svg">
+    </div>
+    <div class="center">
+      <img class="icon" src="assets/icon/lock.svg">
+    </div>
+    <div class="right">
+      <img class="icon" src="assets/icon/battery-full.svg">
+    </div>
+  </div>
+  <div class="content" slideHorizontalDirective>
+    <div class="tips">
+      <div class="time">{{ getNowDateTime() | date:'HH:mm'}}</div>
+      <div class="date">{{ getNowDateTime() | date:'yyyy/M/dd'}}</div>
+    </div>
+    <div class="notification">
+      <div *ngFor="let item of notifications" slideHorizontalDirective>
+        <div class="head">
+          <div class="left">
+            <img class="icon" src="{{'assets/icon/'+item.icon+'.svg'}}">
+            <span>{{item.name}}</span>
+          </div>
+          <div class="right">
+            <span>{{item.date | date:'HH:mm'}}</span>
+          </div>
+        </div>
+        <div class="message">
+          <div class="title">{{item.title}}</div>
+          <div class="info">{{item.content}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="lock">
+      <div class="text">slide to unlock</div>
+      <div class="function" slideVerticalDirective>
+        <div class="seek_bar"></div>
+        <div class="controller">
+          <div class="switches">
+            <div class="switch" *ngFor="let item of switches">
+              <img class="icon" src="{{'assets/icon/'+item+'.svg'}}">
+            </div>
+          </div>
+          <div class="music">
+            <div class="music_info">
+              <div class="avatar"></div>
+              <div class="right">
+                <div class="title">If i die young</div>
+                <div class="artist">Jack Paul</div>
+              </div>
+            </div>
+            <div class="buttons">
+              <img class="icon" src="assets/icon/skip-backward.svg">
+              <img class="icon" src="assets/icon/play.svg">
+              <img class="icon" src="assets/icon/skip-forward.svg">
+            </div>
+          </div>
+          <div class="tools">
+            <div class="tool" *ngFor="let item of tools">
+              <img class="icon" src="{{'assets/icon/'+item+'.svg'}}">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-

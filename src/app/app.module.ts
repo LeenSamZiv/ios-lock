@@ -1,11 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
+import {SlideHorizontalDirective, SlideVerticalDirective} from './app.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SlideHorizontalDirective,
+    SlideVerticalDirective,
   ],
   imports: [
     BrowserModule
@@ -13,4 +16,5 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -4,11 +4,35 @@
   <meta charset="utf-8">
   <title>IosLock</title>
   <base href="/">
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <style>
+    * {
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      user-select: none;
+      cursor: pointer;
+    }
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    html {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    app-root {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+  </style>
 </head>
 <body>
-  <app-root></app-root>
+<app-root></app-root>
 </body>
 </html>
