@@ -1,4 +1,4 @@
-# iOSLockScreenDemo
+# iOSLockScreen
 An iOS Lock Screen Trick
 
 > Maven `3.6.1`
