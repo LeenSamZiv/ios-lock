@@ -9,6 +9,4 @@ An iOS Lock Screen Trick
 
 > ionicons `4.5.9-0`
 
-[REVIEW](http://leenwong.cn/ios)
-
 ![](review.gif)
